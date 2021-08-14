@@ -125,8 +125,8 @@ MemberAccess = Expression '.' Identifier
 IndexAccess = Expression '[' Expression? ']'
 
 BooleanLiteral = 'true' | 'false'
-NumberLiteral = ( HexNumber | DecimalNumber ) (' ' NumberUnit)?
-NumberUnit = 'wei' | 'szabo' | 'finney' | 'ether'
+NumberLiteral = ( HexNumber | DecimalNumber | TrcTokenNumber ) (' ' NumberUnit)?
+NumberUnit = 'wei' | 'szabo' | 'finney' | 'trx'
            | 'seconds' | 'minutes' | 'hours' | 'days' | 'weeks' | 'years'
 HexLiteral = 'hex' ('"' ([0-9a-fA-F]{2})* '"' | '\'' ([0-9a-fA-F]{2})* '\'')
 StringLiteral = '"' ([^"\r\n\\] | '\\' .)* '"'
