@@ -1,13 +1,15 @@
 <idea-plugin>
     <id>me.serce.solidity</id>
     <name>Solidity</name>
-    <vendor email="sergeicelov@gmail.com" url="https://github.com/intellij-solidity">Intellij Solidity</vendor>
+    <vendor email="matt@mattmalec.com" url="https://github.com/mattmalec/intellij-solidity">Matt Malec</vendor>
 
     <description><![CDATA[
       IntelliJ solidity support
 
+      This is a fork of <a href="https://github.com/mattmalec/intellij-solidity">Intellij Solidity</a>
+
       <p>
-        You can support the plugin development by <a href="https://github.com/intellij-solidity/intellij-solidity">sponsoring</a> ❤️ the plugin on Github, by clicking star on
+        You can support the original developer by <a href="https://github.com/intellij-solidity/intellij-solidity">sponsoring</a> ❤️ the plugin on Github, by clicking star on
         <a href="https://github.com/intellij-solidity/intellij-solidity">GitHub</a>
         and rating it on the <a href="https://plugins.jetbrains.com/plugin/9475-intellij-solidity">plugin page</a>.
       </p>
@@ -18,23 +20,10 @@
 
     <change-notes><![CDATA[
       <p>
-        <b>v2.3.3</b>
+
+        <b>v2.3.5</b>
         <ul>
-          <li>Huge thank you to Tyler Smith (@tyler-smith) and Bryan Green (@bryangreen) for sponsoring the plugin development!❤️</li>
-          <li>Huge thank you to all gitcoin supporters https://gitcoin.co/grants/1047/intellij-solidity!❤️</li>
-          <li>Support error definitions, yours @SerCeMan</li>
-          <li>Error/revert definition highlighting, yours @SerCeMan</li>
-          <li>Support unicode literals, yours @SerCeMan</li>
-          <li>Fix various collected error reports, yours @SerCeMan</li>
-          <li>Rename IntelliJ Solidity to Solidity to follow the guidelines</li>
-        </ul>
-        <b>v2.3.2</b>
-        <ul>
-          <li>Huge thank you to Tyler Smith (@tyler-smith) for sponsoring the plugin development!❤️</li>
-          <li>Support .slot and .offset within assembly blocks, yours @SerCeMan</li>
-          <li>Support unchecked blocks, yours @SerCeMan</li>
-          <li>Support state variable override, thanks Gerardo Nardelli! (@patitonar)</li>
-          <li>Use v.0.5.x as the recommended stable version, thanks @pironmind!</li>
+            <li>Add TRON TVM support</li>
         </ul>
       </p>
     ]]>
