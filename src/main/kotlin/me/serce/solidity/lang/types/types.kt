@@ -76,6 +76,17 @@ object SolAddress : SolPrimitiveType {
   }
 }
 
+object SolTrcToken : SolPrimitiveType {
+  override fun isAssignableFrom(other: SolType): Boolean =
+    when (other) {
+      is SolTrcToken -> true
+      is SolInteger -> true
+      else -> UINT_160.isAssignableFrom(other)
+    }
+
+  override fun toString() = "trcToken"
+}
+
 data class SolInteger(val unsigned: Boolean, val size: Int) : SolNumeric {
   companion object {
     val UINT_160 = SolInteger(true, 160)

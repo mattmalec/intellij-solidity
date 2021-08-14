@@ -28,6 +28,7 @@ fun getSolType(type: SolTypeName?): SolType {
         "bool" -> SolBoolean
         "string" -> SolString
         "address" -> SolAddress
+        "trcToken" -> SolTrcToken
         else -> {
           try {
             SolInteger.parse(text)
