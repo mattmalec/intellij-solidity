@@ -89,7 +89,7 @@ class SolContextCompletionContributor : CompletionContributor(), DumbAware {
     )
 }
 
-fun baseTypes() = hashSetOf("bool", "uint", "int", "fixed", "ufixed", "address", "byte", "bytes", "string")
+fun baseTypes() = hashSetOf("bool", "uint", "int", "fixed", "ufixed", "address", "byte", "bytes", "string", "trcToken")
 
 class SolBaseTypesCompletionContributor : CompletionContributor(), DumbAware {
   init {

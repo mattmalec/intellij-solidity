@@ -35,6 +35,7 @@ object SolHighlighter : SyntaxHighlighterBase() {
     DECIMALNUMBER to SolColor.NUMBER,
     HEXNUMBER to SolColor.NUMBER,
     NUMBERUNIT to SolColor.NUMBER,
+    TRCTOKENNUMBER to SolColor.NUMBER,
 
     STRINGLITERAL to SolColor.STRING
   ).plus(
