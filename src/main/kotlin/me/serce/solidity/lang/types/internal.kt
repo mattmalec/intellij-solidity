@@ -31,6 +31,8 @@ class SolInternalTypeFactory(project: Project) {
           uint gas;
           address sender;
           uint value;
+          uint tokenvalue;
+          uint tokenid;
       }
     """))
   }
@@ -48,8 +50,9 @@ class SolInternalTypeFactory(project: Project) {
     SolContract(psiFactory.createContract("""
       contract ${internalise("Address")} {
           function transfer(uint value);
-          
           function send(uint value) returns (bool);
+          function transferToken(uint256 tokenValue, trcToken tokenId);
+          function tokenBalance(trcToken tokenId) returns (uint256);
       }
     """))
   }
@@ -65,8 +68,6 @@ class SolInternalTypeFactory(project: Project) {
   val blockType: SolType by lazy {
     BuiltinType(internalise("Block"), listOf(
       BuiltinCallable(listOf(), SolAddress, "coinbase", null, Usage.VARIABLE),
-      BuiltinCallable(listOf(), UINT_256, "difficulty", null, Usage.VARIABLE),
-      BuiltinCallable(listOf(), UINT_256, "gasLimit", null, Usage.VARIABLE),
       BuiltinCallable(listOf(), UINT_256, "number", null, Usage.VARIABLE),
       BuiltinCallable(listOf(), UINT_256, "timestamp", null, Usage.VARIABLE),
       BuiltinCallable(listOf("blockNumber" to UINT_256), SolFixedBytes(32), "blockhash", null, Usage.VARIABLE)
