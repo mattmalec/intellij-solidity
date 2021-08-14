@@ -22,12 +22,12 @@ import java.awt.Component
 
 class SentryReportSubmitter : ErrorReportSubmitter() {
 
-  init {
-    // IntelliJ Solidity N
-    val dsn = "https://4cf4758bb74b408a82c9c4f200b63837:45584ba1888b405f80c886e163031be0@sentry.io/301677" +
-      "?${DefaultSentryClientFactory.UNCAUGHT_HANDLER_ENABLED_OPTION}=false"
-    Sentry.init(dsn)
-  }
+//  init {
+//    // IntelliJ Solidity N
+//    val dsn = "https://4cf4758bb74b408a82c9c4f200b63837:45584ba1888b405f80c886e163031be0@sentry.io/301677" +
+//      "?${DefaultSentryClientFactory.UNCAUGHT_HANDLER_ENABLED_OPTION}=false"
+//    Sentry.init(dsn)
+//  }
 
   private val pluginVersion = PluginManagerCore.getPlugin(PluginId.getId("me.serce.solidity"))?.version ?: "unknown"
 
@@ -73,7 +73,7 @@ class SentryReportSubmitter : ErrorReportSubmitter() {
       eventBuilder.withExtra("extra_events", events.drop(1).joinToString("\n") { it.toString() })
     }
     return try {
-      Sentry.capture(eventBuilder)
+//      Sentry.capture(eventBuilder)
       consumer.consume(SubmittedReportInfo(null, "Error has been successfully reported", NEW_ISSUE))
       true
     } catch (e: ConnectionException) {
